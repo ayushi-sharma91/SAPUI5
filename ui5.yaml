@@ -28,3 +28,14 @@ builder:
       afterTask: webide-extension-task-lint
       configuration:
         nameSpace: com/yash/ptg/employee_dashboard
+customConfiguration:
+  deployer:
+    type: sap-cp-cf
+    sourcePath: /dist # Path to the manifest.yml file: https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html
+    connection:
+      url: https://api.cf.eu10.hana.ondemand.com
+    sapCloudPlatform:
+      cloudFoundry:
+        org: 272f5985trial
+        space: dev
+        cliPath: C:\cf-cli\tools
